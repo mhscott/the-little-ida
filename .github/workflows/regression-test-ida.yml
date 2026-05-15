@@ -50,4 +50,4 @@ jobs:
         with:
           archive: false
           path: |
-            little-ida.png
+            little-ida-${{ matrix.openseespy-version }}.png
