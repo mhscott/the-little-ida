@@ -54,6 +54,11 @@ while gmFact < 2.0:
 
     Uplot.append(Umax)
 
+with open('little-ida-results.csv', 'w') as f:
+    f.write('gmFactor,Umax\n')
+    for gm, u in zip(gmPlot, Uplot):
+        f.write(f'{gm:.3f},{u}\n')
+
 plt.subplot(2,2,1)
 plt.plot(Uplot,gmPlot,'-k')
 plt.xlim(left=0)
