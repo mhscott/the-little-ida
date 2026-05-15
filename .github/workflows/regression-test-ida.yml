@@ -44,6 +44,7 @@ jobs:
       - name: Run Little IDA
         run: |
           python little-ida.py
+          mv little-ida.png little-ida-${{ matrix.openseespy-version }}.png # Rename file for upload
 
       - name: Upload plot
         uses: actions/upload-artifact@v7
